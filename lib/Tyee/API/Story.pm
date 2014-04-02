@@ -451,7 +451,7 @@ sub _build_page_image {
         || $element->get_value( 'image_title' )
         || '';
     my $url  = $CDN . $uri;
-    my $tiny = 'http://i.tinysrc.mobi/';
+    my $tiny = 'http://src.sencha.io/';
 
     # Hackish but it will work for now
     my $tiny_w   = ceil( $width / 2 );
