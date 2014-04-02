@@ -595,6 +595,7 @@ sub _build_related_media {
 sub _build_related_media_asset {
     my $element = shift;
     my $image   = $element->get_related_media;
+    if ( $image ) {
     my $melem   = $image->get_element;
     my %related_media_asset;
     $related_media_asset{'name'}    = $image->get_name;
@@ -628,6 +629,8 @@ sub _build_related_media_asset {
     }
     $related_media_asset{'thumbnails'} = \@related_media_thumbs;
     return \%related_media_asset;
+    }
+    return undef;
 }    # ----------  end of subroutine _build_related_media  ----------
 
 #===  FUNCTION  ================================================================

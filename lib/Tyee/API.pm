@@ -28,6 +28,17 @@ my $e = ElasticSearch->new(
     timeout => $config->{'timeout'} || 30,
 );
 
+#===  FUNCTION  ================================================================
+#         NAME:  new
+#      PURPOSE:  To return the ES object 
+#   PARAMETERS:  none
+#      RETURNS:  The object, or an error message
+#===============================================================================
+sub new {
+    my $self  = shift;
+    return \$e; 
+}
+
 =head1 SYNOPSIS
 
 Add or remove documents from the Tyee API
